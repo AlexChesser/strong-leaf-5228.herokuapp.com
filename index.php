@@ -305,7 +305,7 @@ $app_name = idx($app_info, 'name', '');
 				}
 				var id = event.target.id;
 				var value = event.target.value;
-				$("#friends").each(function(idx,el){
+				$("#friends div").each(function(idx,el){
 					console.log(el);
 					if($(el).html().match(value)){
 						console.log("matched:"+el.name);
