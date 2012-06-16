@@ -306,7 +306,7 @@ $app_name = idx($app_info, 'name', '');
 				var id = event.target.id;
 				var value = event.target.value;
 				$("#friends").children().each(function(idx,el){
-					if($(el).html().match(value)){
+					if($(el).html().toLowerCase().match(value).toLowerCase()){
 //						console.log("matched:"+el.name);
 						$(el).show();
 					} else {
