@@ -201,8 +201,8 @@ $app_name = idx($app_info, 'name', '');
 						AllFriends = response.data;
 //						$(document).ready(function(){
 							var friendsDiv = $("#friends");
-							for (i = 0; i<AllFriends.length;i++){
-								var f = AllFriends.data[i];
+							for (i = 0; i<response.length;i++){
+								var f = response.data[i];
 								var div = document.createElement("div");
 								div.id = f.id;
 								div.name = f.name;
