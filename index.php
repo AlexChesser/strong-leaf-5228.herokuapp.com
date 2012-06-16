@@ -191,17 +191,9 @@ $app_name = idx($app_info, 'name', '');
           // post made to this page and a reload will trigger a message to the
           // user asking if they want to send data again.
           window.location = window.location;
-
-					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
-						for (i = 0; i<response.data.length;i++){
-							console.log(response.data[i]);
-						}
-					});
-
-
         });
 
-/*
+
 			FB.getLoginStatus(function(response) {
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
@@ -211,7 +203,7 @@ $app_name = idx($app_info, 'name', '');
 					});
 				};
 			});
-*/
+
         FB.Canvas.setAutoGrow();
       };
 
