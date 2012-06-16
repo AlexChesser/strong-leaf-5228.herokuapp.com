@@ -239,6 +239,20 @@ $app_name = idx($app_info, 'name', '');
         </div>
       </div>
       <?php } else { ?>
+
+		<script type="text/javascript">
+			FB.getLoginStatus(function(response) {
+				if(response.status === "connected"){
+					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
+						for (i = 0; i<response.data.length;i++){
+							console.log(response.data[i]);
+						}
+					});
+				};
+			});
+		</script>
+
+
         <section id="get-started">
             <p>Welcome to <span>The Matchmaker</span>! Created as Part of the Toronto Facebook Hackathon </p>
             <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
