@@ -200,16 +200,6 @@ $app_name = idx($app_info, 'name', '');
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
 						AllFriends = response.data;
 //						$(document).ready(function(){
-							var friendsDiv = $("#friends");
-							for (i = 0; i<response.length;i++){
-								var f = response.data[i];
-								var div = document.createElement("div");
-								div.id = f.id;
-								div.name = f.name;
-								div.innerHtml = f.name;
-								friendsDiv.appendChild(div);
-								console.log(div);	
-							}
 //						});
 					});
 				};
@@ -292,7 +282,24 @@ $app_name = idx($app_info, 'name', '');
 		</div>
 
 		<script type="text/javascript">
+			var ShouldInitFriends = 1;
+			function InitFriends(){
+				var friendsDiv = $("#friends");
+				for (i = 0; i<response.length;i++){
+					var f = response.data[i];
+					var div = document.createElement("div");
+					div.id = f.id;
+					div.name = f.name;
+					div.innerHtml = f.name;
+					friendsDiv.appendChild(div);
+					console.log(div);	
+				}
+				ShouldInitFriends = 0;
+			}
 			$(".faf").on("keyup", function(event){
+				if(ShouldInitFriends === 1){
+					InitFriends();
+				}
 				var id = event.target.id;
 				var value = event.target.value;
 				
