@@ -278,7 +278,7 @@ $app_name = idx($app_info, 'name', '');
 		</div>
 
 		<script type="text/javascript">
-			$("faf").on("keyup", function(event){
+			$(".faf").on("keyup", function(event){
 				console.log(event.target.id);
 				console.log(event.target.value);
 			});
