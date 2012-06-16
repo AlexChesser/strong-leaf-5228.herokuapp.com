@@ -348,15 +348,15 @@ $app_name = idx($app_info, 'name', '');
 				FB.ui({
 					app_id:'<?php echo AppInfo::appID(); ?>',
 					method: 'send',
-					name: date_name,
-					link: 'http://facebook.com/'+date_id,
+					name: "sdfds jj jjjsdj j j ",
+					link: 'https://strong-leaf-5228.herokuapp.com/',
 					to:to,
-					description:'I think you should date my friend '+date_name
+					description:'I think you should date my friend '+date
 
 				});
 			}
 			function TellThem(){
-				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf1").val()+","+$("#faf2").val());
+				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf2").val()+","+$("#faf2").val());
 			}
 		</script>
 
