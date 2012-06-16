@@ -313,7 +313,7 @@ $app_name = idx($app_info, 'name', '');
 				var pattern =new RegExp(value,'i');
 				$("#friends").children().each(function(idx,el){
 					
-					if(pattern.text($(el).html()){
+					if(pattern.test($(el).html())){
 //						console.log("matched:"+el.name);
 						$(el).show();
 					} else {
