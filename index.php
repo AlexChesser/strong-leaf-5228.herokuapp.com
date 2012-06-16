@@ -247,8 +247,8 @@ $app_name = idx($app_info, 'name', '');
     </header>
 
     <section id="get-started">
-      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
+        <p>Welcome to <span>The Matchmaker</span>! Created as Part of the Toronto Facebook Hackathon </p>
+        <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
     </section>
 
     <?php
