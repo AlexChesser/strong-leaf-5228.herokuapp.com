@@ -274,9 +274,11 @@ $app_name = idx($app_info, 'name', '');
 
 	?>
 		<div> I think that:
-			<input type="text" name="findafrined1" id="faf1" class="faf" placeholder="Enter a Friend's Name" /> 
+			<input type="text" name="findafrined1" id="faf1" class="faf" placeholder="Enter a Friend's Name" />
+			<input type="hidden" name="friendid1" id="friend_id_faf1" />
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" class="faf"  placeholder="Enter another Friend's Name" /> 
+			<input type="hidden" name="friendid2" id="friend_id_faf2" />
 		</div>
 		<div id="friends">
 		</div>
@@ -335,6 +337,7 @@ $app_name = idx($app_info, 'name', '');
 			});
 			function AddMatch(el){
 				$("#"+BOX).val(el.innerHTML);
+				$("#friend_id_"+BOX).val(el.id);
 //				console.log(el);
 			}
 
