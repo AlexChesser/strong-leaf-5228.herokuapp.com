@@ -344,32 +344,19 @@ $app_name = idx($app_info, 'name', '');
 					$("#date").prop("disabled","");
 				}
 			}
-			function TellThem(){
+			function facebook_send_message(to) {
 				FB.ui({
-				   method: 'feed',
-				   message: 'getting educated about Facebook Connect',
-				   name: 'Connect',
-				   caption: 'The Facebook Connect JavaScript SDK',
-					  description: (
-					  'A small JavaScript library that allows you to harness ' +
-					  'the power of Facebook, bringing the user\'s identity, ' +
-					  'social graph and distribution power to your site.'
-				   ),
-				   link: 'http://www.fbrell.com/',
-				   picture: 'http://www.fbrell.com/f8.jpg',
-				   actions: [
-						{ name: 'fbrell', link: 'http://www.fbrell.com/' }
-				   ],
-				  user_message_prompt: 'Share your thoughts about RELL'
-				  },
-				  function(response) {
-					if (response && response.post_id) {
-					  alert('Post was published.');
-					} else {
-					  alert('Post was not published.');
-					}
-				  }
-				);
+					app_id:'<?php echo AppInfo::appID(); ?>',
+					method: 'send',
+					name: "sdfds jj jjjsdj j j ",
+					link: 'https://apps.facebook.com/xxxxxxxaxsa',
+					to:to,
+					description:'sdf sdf sfddsfdd s d  fsf s '
+
+				});
+			}
+			function TellThem(){
+				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf2").val());
 			}
 		</script>
 
