@@ -329,7 +329,7 @@ $app_name = idx($app_info, 'name', '');
 				})
 			});
 			function AddMatch(el){
-				console.log(this);
+				console.log(el);
 			}
 
 		</script>
