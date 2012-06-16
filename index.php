@@ -198,13 +198,9 @@ $app_name = idx($app_info, 'name', '');
 			FB.getLoginStatus(function(response) {
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
-							AllFriends = response.data;
-							$(document).ready(function(){
-								for(i = 0; i<AllFriends.length;i++){
-									console.log(AllFriends[i]);
-								}
-							}){
-
+						AllFriends = response.data;
+						$(document).ready(function(){
+							console.log(response.data[i]);
 						});
 					});
 				};
