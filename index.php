@@ -271,16 +271,18 @@ $app_name = idx($app_info, 'name', '');
       if ($user_id) {
 
 	?>
-		<script type="text/javascript">
-			$("#faf1").on("keyup",function(e){
-				console.log(e);
-			});
-		</script>
 		<div> I think that:
 			<input type="text" name="findafrined1" id="faf1" placeholder="Enter a Friend's Name" /> 
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" placeholder="Enter another Friend's Name" /> 
 		</div>
+
+		<script type="text/javascript">
+			$("#faf1").on("keyup", function(event){
+				console.log($(this).text());
+			});
+		</script>
+
 	<?php
 /*          
     ?>
