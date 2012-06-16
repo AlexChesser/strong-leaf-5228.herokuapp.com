@@ -285,8 +285,8 @@ $app_name = idx($app_info, 'name', '');
 			var ShouldInitFriends = 1;
 			function InitFriends(){
 				var friendsDiv = $("#friends");
-				for (i = 0; i<response.length;i++){
-					var f = response.data[i];
+				for (i = 0; i<AllFriends.length;i++){
+					var f = AllFriends.data[i];
 					var div = document.createElement("div");
 					div.id = f.id;
 					div.name = f.name;
