@@ -310,8 +310,10 @@ $app_name = idx($app_info, 'name', '');
 				}
 				var id = event.target.id;
 				var value = event.target.value;
+				var pattern =new RegExp(value,'i');
 				$("#friends").children().each(function(idx,el){
-					if($(el).html().toLowerCase().match(value).toLowerCase()){
+					
+					if(pattern.text($(el).html()){
 //						console.log("matched:"+el.name);
 						$(el).show();
 					} else {
