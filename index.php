@@ -344,19 +344,19 @@ $app_name = idx($app_info, 'name', '');
 					$("#date").prop("disabled","");
 				}
 			}
-			function facebook_send_message(to) {
+			function facebook_send_message(to,date_id,date_name) {
 				FB.ui({
 					app_id:'<?php echo AppInfo::appID(); ?>',
 					method: 'send',
-					name: "sdfds jj jjjsdj j j ",
-					link: 'https://apps.facebook.com/xxxxxxxaxsa',
+					name: date_name,
+					link: 'http://facebook.com/'+date_id,
 					to:to,
-					description:'sdf sdf sfddsfdd s d  fsf s '
+					description:'I think you should date my friend '+date_name
 
 				});
 			}
 			function TellThem(){
-				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf2").val());
+				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf1").val()+","+$("#faf2").val());
 			}
 		</script>
 
