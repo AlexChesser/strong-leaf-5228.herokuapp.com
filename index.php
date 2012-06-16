@@ -328,6 +328,7 @@ $app_name = idx($app_info, 'name', '');
 				})
 			});
 			function AddMatch(el){
+				console.log(el.parentNode);	
 				console.log(el.innerHTML);
 			}
 
