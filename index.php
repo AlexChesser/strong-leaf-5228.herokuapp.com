@@ -244,7 +244,7 @@ $app_name = idx($app_info, 'name', '');
             <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
         </section>
       <div>
-        <div class="fb-login-button" data-scope="user_likes,user_photos"> to get started!</div>
+        <div class="fb-login-button" data-scope="user_likes,user_photos">Login with Facebook to Get Started!</div> 
       </div>
       <?php } ?>
     </header>
