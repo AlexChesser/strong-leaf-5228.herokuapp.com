@@ -253,11 +253,14 @@ $app_name = idx($app_info, 'name', '');
 
     <?php
       if ($user_id) {
+
+	?>
 		<div> I think that:
 			<input type="text" name="findafrined1" id="faf1" placeholder="Enter a Friend's Name" /> 
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" placeholder="Enter another Friend's Name" /> 
 		</div>
+	<?php
 /*          
     ?>
 
