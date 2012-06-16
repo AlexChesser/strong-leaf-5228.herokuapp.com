@@ -198,7 +198,14 @@ $app_name = idx($app_info, 'name', '');
 			FB.getLoginStatus(function(response) {
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
-						AllFriends = response.data;
+							AllFriends = response.data;
+							$(document).ready(function(){
+								for(i = 0; i<AllFriends.length;i++){
+									console.log(AllFriends[i]);
+								}
+							}){
+
+						});
 					});
 				};
 			});
@@ -276,11 +283,14 @@ $app_name = idx($app_info, 'name', '');
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" class="faf"  placeholder="Enter another Friend's Name" /> 
 		</div>
+		<div id="allfriends">
+		</div>
 
 		<script type="text/javascript">
 			$(".faf").on("keyup", function(event){
-				console.log(event.target.id);
-				console.log(event.target.value);
+				var id = event.target.id;
+				var value = event.target.value;
+				
 			});
 		</script>
 
