@@ -301,7 +301,7 @@ $app_name = idx($app_info, 'name', '');
 						div.name = f.name;
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
-						a.href = "javascript:void();";
+						a.href = "javascript:match(this);";
 						a.innerHTML = f.name;
 						div.appendChild(a)
 						friendsDiv.appendChild(div);
@@ -327,10 +327,10 @@ $app_name = idx($app_info, 'name', '');
 					}
 				})
 			});
-			$("friend").on("click", function(event){
-				var id = event.target.id;
-				console.log("clicked "+$(id).html());
-			});
+			function AddMatch(el){
+				console.log(el.innerHTML);
+			}
+
 		</script>
 
 	<?php
