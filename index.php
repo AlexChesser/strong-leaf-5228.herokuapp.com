@@ -301,7 +301,7 @@ $app_name = idx($app_info, 'name', '');
 						div.name = f.name;
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
-						a.href = "javascript:AddMatch('"+f.id+"');";
+						a.href = "javascript:AddMatch(this);";
 						a.innerHTML = f.name;
 						div.appendChild(a)
 						friendsDiv.appendChild(div);
@@ -326,7 +326,7 @@ $app_name = idx($app_info, 'name', '');
 				})
 			});
 			function AddMatch(el){
-				console.log(el.parentNode);	
+				console.log(this);	
 				console.log(el.innerHTML);
 			}
 
