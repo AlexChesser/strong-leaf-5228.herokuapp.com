@@ -349,7 +349,7 @@ $app_name = idx($app_info, 'name', '');
 				FB.ui({
 					app_id:'<?php echo AppInfo::appID(); ?>',
 					method: 'send',
-					name: "sdfds jj jjjsdj j j ",
+					name: "Match Mater",
 					link: 'https://strong-leaf-5228.herokuapp.com/',
 					to:to,
 					description:'I think you should date my friend '+date
