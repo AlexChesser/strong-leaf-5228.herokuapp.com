@@ -199,9 +199,6 @@ $app_name = idx($app_info, 'name', '');
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
 						AllFriends = response.data;
-						$(document).ready(function(){
-							console.log(response.data[i]);
-						});
 					});
 				};
 			});
@@ -279,7 +276,7 @@ $app_name = idx($app_info, 'name', '');
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" class="faf"  placeholder="Enter another Friend's Name" /> 
 		</div>
-		<div id="allfriends">
+		<div id="friends">
 		</div>
 
 		<script type="text/javascript">
