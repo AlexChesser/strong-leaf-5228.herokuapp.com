@@ -355,7 +355,7 @@ $app_name = idx($app_info, 'name', '');
 					app_id:'<?php echo AppInfo::appID(); ?>',
         				method: 'send',
 					to: $("#friend_id_faf"+to).val(),
-          			name: 'I think you should date a friend of mine ',
+          			name: 'I think you should date a friend of mine you should say hi to: '+$("#faf"+date).val(),
 		          	link: 'https://facebook.com/'+$("#friend_id_faf"+date).val(),
 				},
 				function(response) {
