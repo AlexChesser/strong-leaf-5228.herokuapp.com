@@ -357,7 +357,12 @@ $app_name = idx($app_info, 'name', '');
 					to: $("#friend_id_faf"+to).val(),
           			name: 'I think you should date a friend of mine ',
 		          	link: 'https://facebook.com/'+$("#friend_id_faf"+date).val(),
-				});
+				},
+				function(response) {
+					if (to === "1") {
+						facebook_send_message('2');
+					}
+				);
 			}
 			function TellThem(){
 				facebook_send_message('1');
