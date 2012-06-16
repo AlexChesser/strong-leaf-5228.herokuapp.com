@@ -362,6 +362,7 @@ $app_name = idx($app_info, 'name', '');
 					if (to === "1") {
 						facebook_send_message('2');
 					}
+				}
 				);
 			}
 			function TellThem(){
