@@ -301,7 +301,7 @@ $app_name = idx($app_info, 'name', '');
 						div.name = f.name;
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
-						a.href = "javascript:match(this);";
+						a.href = "javascript:AddMatch(this);";
 						a.innerHTML = f.name;
 						div.appendChild(a)
 						friendsDiv.appendChild(div);
@@ -319,11 +319,9 @@ $app_name = idx($app_info, 'name', '');
 				$("#friends").children().each(function(idx,el){
 					
 					if(pattern.test($(el).html())){
-//						console.log("matched:"+el.name);
 						$(el).show();
 					} else {
 						$(el).hide();
-						//console.log(value + " does not match:"+el.name);
 					}
 				})
 			});
