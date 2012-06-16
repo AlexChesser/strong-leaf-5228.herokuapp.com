@@ -299,6 +299,7 @@ $app_name = idx($app_info, 'name', '');
 						div.id = f.id;
 						div.name = f.name;
 						$(div).addClass("friend");
+						div.setAttribute("class", "friend");
 						div.innerHTML = f.name;
 						friendsDiv.appendChild(div);
 					}
@@ -323,7 +324,7 @@ $app_name = idx($app_info, 'name', '');
 					}
 				})
 			});
-			$("#friends > div").on("click", function(event){
+			$("friend").on("click", function(event){
 				var id = event.target.id;
 				console.log("clicked "+$(id).html());
 			});
