@@ -283,14 +283,15 @@ $app_name = idx($app_info, 'name', '');
 		<style type="text/css">
 			#friends > div{	
 				float: left;
-
+				padding: 2px;
+				margin: 2px;
+				border: 1px solid black;
 			}
 		</style>
 		<script type="text/javascript">
 			var ShouldInitFriends = 1;
 			function InitFriends(){
 				var friendsDiv = document.getElementById("friends");
-				console.log()
 				if (AllFriends != 0){
 					for (i = 0; i<AllFriends.length;i++){
 						var f = AllFriends[i];
@@ -318,9 +319,13 @@ $app_name = idx($app_info, 'name', '');
 						$(el).show();
 					} else {
 						$(el).hide();
-						console.log(value + " does not match:"+el.name);
+						//console.log(value + " does not match:"+el.name);
 					}
 				})
+			});
+			$("#friends > div").on("click", function(event){
+				var id = event.target.id;
+				console.log("clicked "+$(id).html());
 			});
 		</script>
 
