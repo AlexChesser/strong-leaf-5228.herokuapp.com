@@ -262,7 +262,7 @@ $app_name = idx($app_info, 'name', '');
             <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
         </section>
       <div>
-        <div class="fb-login-button" data-scope="user_likes,user_photos">Login with Facebook to Get Started!</div> 
+        <div class="fb-login-button" data-scope="user_likes,user_photos,stream_publish,publish_action">Login with Facebook to Get Started!</div> 
       </div>
       <?php } ?>
     </header>
@@ -279,7 +279,7 @@ $app_name = idx($app_info, 'name', '');
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" class="faf"  placeholder="Enter another Friend's Name" /> 
 			<input type="hidden" name="friendid2" id="friend_id_faf2" />&nbsp;
-			<input type="submit" id="date" disabled="disabled" onclick="alert('posted message to them!')" value="Tell Them!" />
+			<input type="submit" id="date" disabled="disabled" onclick="TellThem();" value="Tell Them!" />
 		</div>
 		<div id="friends">
 		</div>
@@ -344,7 +344,33 @@ $app_name = idx($app_info, 'name', '');
 					$("#date").prop("disabled","");
 				}
 			}
-
+			function TellThem(){
+				FB.ui({
+				   method: 'feed',
+				   message: 'getting educated about Facebook Connect',
+				   name: 'Connect',
+				   caption: 'The Facebook Connect JavaScript SDK',
+					  description: (
+					  'A small JavaScript library that allows you to harness ' +
+					  'the power of Facebook, bringing the user\'s identity, ' +
+					  'social graph and distribution power to your site.'
+				   ),
+				   link: 'http://www.fbrell.com/',
+				   picture: 'http://www.fbrell.com/f8.jpg',
+				   actions: [
+						{ name: 'fbrell', link: 'http://www.fbrell.com/' }
+				   ],
+				  user_message_prompt: 'Share your thoughts about RELL'
+				  },
+				  function(response) {
+					if (response && response.post_id) {
+					  alert('Post was published.');
+					} else {
+					  alert('Post was not published.');
+					}
+				  }
+				);
+			}
 		</script>
 
 	<?php
