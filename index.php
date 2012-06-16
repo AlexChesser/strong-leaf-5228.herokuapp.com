@@ -296,11 +296,14 @@ $app_name = idx($app_info, 'name', '');
 					for (i = 0; i<AllFriends.length;i++){
 						var f = AllFriends[i];
 						var div = document.createElement("div");
+						var a = document.createElement("a");
 						div.id = f.id;
 						div.name = f.name;
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
-						div.innerHTML = f.name;
+						a.href = "javascript:void();";
+						a.innerHTML = f.name;
+						div.appendChild(a)
 						friendsDiv.appendChild(div);
 					}
 					ShouldInitFriends = 0;
