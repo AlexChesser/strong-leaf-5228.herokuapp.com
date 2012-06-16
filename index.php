@@ -301,10 +301,12 @@ $app_name = idx($app_info, 'name', '');
 						div.name = f.name;
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
-						a.href = "javascript:void(0);";
-						a.click = "AddMatch(this);";
-						a.innerHTML = f.name;
-						div.appendChild(a)
+						div.setAttribute('onclick', 'AddMatch(this)'); 
+//						a.href = "javascript:void(0);";
+//						a.click = "AddMatch(this);";
+//						a.innerHTML = f.name;
+//						div.appendChild(a)
+						div.innerHTML = f.name;	
 						friendsDiv.appendChild(div);
 					}
 					ShouldInitFriends = 0;
@@ -327,8 +329,7 @@ $app_name = idx($app_info, 'name', '');
 				})
 			});
 			function AddMatch(el){
-				console.log(this);	
-				console.log(el.innerHTML);
+				console.log(this);
 			}
 
 		</script>
