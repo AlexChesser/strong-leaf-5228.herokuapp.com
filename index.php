@@ -279,7 +279,7 @@ $app_name = idx($app_info, 'name', '');
 			should go on a date with:
 			<input type="text" name="findafrined2" id="faf2" class="faf"  placeholder="Enter another Friend's Name" /> 
 			<input type="hidden" name="friendid2" id="friend_id_faf2" />&nbsp;
-			<input type="submit" onclick="alert('posted message to them!')" value="Tell Them!" />
+			<input type="submit" id="date" disabled="disabled" onclick="alert('posted message to them!')" value="Tell Them!" />
 		</div>
 		<div id="friends">
 		</div>
@@ -341,7 +341,7 @@ $app_name = idx($app_info, 'name', '');
 				$("#friend_id_"+BOX).val(el.id);
 //				console.log(el);
 				if($("#friend_id_faf1").val() !== "" && $("#friend_id_faf2").val() !== ""){
-					console.log('date');
+					$("#date").prop("disabled","");
 				}
 			}
 
