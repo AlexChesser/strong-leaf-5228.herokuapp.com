@@ -310,7 +310,7 @@ $app_name = idx($app_info, 'name', '');
 					if($(el).html().match(value)){
 						console.log("matched:"+el.name);
 					} else {
-						console.log("not matched:"+el.name);
+						//console.log("not matched:"+el.name);
 					}
 				})
 			});
