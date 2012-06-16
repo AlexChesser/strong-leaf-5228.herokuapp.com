@@ -344,20 +344,23 @@ $app_name = idx($app_info, 'name', '');
 					$("#date").prop("disabled","");
 				}
 			}
-			function facebook_send_message(to, date_id, date_name) {
+			function facebook_send_message(to) {
 				console.log(to);
+				if (to === "1") {
+					date = "2";
+				} else {
+					date = "1";
+				}
 				FB.ui({
 					app_id:'<?php echo AppInfo::appID(); ?>',
-					method: 'send',
-					name: "Match Mater",
-					link: 'https://strong-leaf-5228.herokuapp.com/',
-					to:to,
-					description:'I think you should date my friend '+date
-
+        				method: 'send',
+					to: $("#friend_id_faf"+to).val(),
+          			name: 'I think you should date a friend of mine ',
+		          	link: 'https://facebook.com/'+$("#friend_id_faf"+date).val(),
 				});
 			}
 			function TellThem(){
-				facebook_send_message($("#friend_id_faf1").val()+","+$("#friend_id_faf2").val()+","+$("#faf2").val());
+				facebook_send_message('1');
 			}
 		</script>
 
