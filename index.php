@@ -280,7 +280,12 @@ $app_name = idx($app_info, 'name', '');
 		</div>
 		<div id="friends">
 		</div>
+		<style type="text/css">
+			#friends > div{	
+				float: left;
 
+			}
+		</style>
 		<script type="text/javascript">
 			var ShouldInitFriends = 1;
 			function InitFriends(){
