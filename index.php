@@ -292,9 +292,9 @@ $app_name = idx($app_info, 'name', '');
 						var div = document.createElement("div");
 						div.id = f.id;
 						div.name = f.name;
+						$(div).addClass("friend");
 						div.innerHTML = f.name;
 						friendsDiv.appendChild(div);
-						console.log(div);	
 					}
 					ShouldInitFriends = 0;
 				}
@@ -305,7 +305,13 @@ $app_name = idx($app_info, 'name', '');
 				}
 				var id = event.target.id;
 				var value = event.target.value;
-				
+				$("#friends").each(function(idx,el){
+					if(el.name.match(value)){
+						console.log("matched:"+el.name);
+					} else {
+						console.log("not matched:"+el.name);
+					}
+				})
 			});
 		</script>
 
