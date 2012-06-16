@@ -344,8 +344,8 @@ $app_name = idx($app_info, 'name', '');
 					$("#date").prop("disabled","");
 				}
 			}
-			function facebook_send_message(to,date_id,date_name) {
-				console.log([to,date_id,date_name]);
+			function facebook_send_message(to, date_id, date_name) {
+				console.log(to);
 				FB.ui({
 					app_id:'<?php echo AppInfo::appID(); ?>',
 					method: 'send',
