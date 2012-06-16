@@ -207,6 +207,7 @@ $app_name = idx($app_info, 'name', '');
 								div.id = f.id;
 								div.name = f.name;
 								div.innerHtml = f.name;
+								friendsDiv.appendChild(div);
 								console.log(div);	
 							}
 //						});
