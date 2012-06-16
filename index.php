@@ -290,6 +290,7 @@ $app_name = idx($app_info, 'name', '');
 		</style>
 		<script type="text/javascript">
 			var ShouldInitFriends = 1;
+			var BOX = 0;
 			function InitFriends(){
 				var friendsDiv = document.getElementById("friends");
 				if (AllFriends != 0){
@@ -319,6 +320,7 @@ $app_name = idx($app_info, 'name', '');
 				var id = event.target.id;
 				var value = event.target.value;
 				var pattern =new RegExp(value,'i');
+				BOX = id;
 				$("#friends").children().each(function(idx,el){
 					
 					if(pattern.test($(el).html())){
@@ -328,8 +330,12 @@ $app_name = idx($app_info, 'name', '');
 					}
 				})
 			});
+			$(".friend").on("click", function(event){
+				console.log("friend click");
+			});
 			function AddMatch(el){
-				console.log(el);
+				$("#"+BOX).val(el.innerHTML);
+//				console.log(el);
 			}
 
 		</script>
