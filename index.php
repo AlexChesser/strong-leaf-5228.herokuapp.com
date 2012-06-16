@@ -302,7 +302,7 @@ $app_name = idx($app_info, 'name', '');
 						$(div).addClass("friend");
 						div.setAttribute("class", "friend");
 						a.href = "javascript:void(0);";
-						a.onclick = "AddMatch(this);";
+						a.click = "AddMatch(this);";
 						a.innerHTML = f.name;
 						div.appendChild(a)
 						friendsDiv.appendChild(div);
