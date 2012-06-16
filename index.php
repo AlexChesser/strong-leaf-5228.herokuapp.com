@@ -173,6 +173,7 @@ $app_name = idx($app_info, 'name', '');
   <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
+		var AllFriends;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '<?php echo AppInfo::appID(); ?>', // App ID
@@ -197,9 +198,7 @@ $app_name = idx($app_info, 'name', '');
 			FB.getLoginStatus(function(response) {
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
-						for (i = 0; i<response.data.length;i++){
-							console.log(response.data[i]);
-						}
+						AllFriends = response.data;
 					});
 				};
 			});
@@ -272,6 +271,11 @@ $app_name = idx($app_info, 'name', '');
       if ($user_id) {
 
 	?>
+		<script type="text/javascript">
+			$("#faf1").on("keyup",function(e){
+				console.log(e);
+			});
+		</script>
 		<div> I think that:
 			<input type="text" name="findafrined1" id="faf1" placeholder="Enter a Friend's Name" /> 
 			should go on a date with:
