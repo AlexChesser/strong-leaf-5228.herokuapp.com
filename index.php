@@ -199,7 +199,7 @@ $app_name = idx($app_info, 'name', '');
 				if(response.status === "connected"){
 					FB.api("/me/friends?auth_token="+response.authResponse.accessToken, function(response){
 						AllFriends = response.data;
-						$(document).ready(function(){
+//						$(document).ready(function(){
 							var friendsDiv = $("#friends");
 							for (i = 0; i<AllFriends.length;i++){
 								var f = AllFriends.data[i];
@@ -209,7 +209,7 @@ $app_name = idx($app_info, 'name', '');
 								div.innerHtml = f.name;
 								console.log(div);	
 							}
-						});
+//						});
 					});
 				};
 			});
