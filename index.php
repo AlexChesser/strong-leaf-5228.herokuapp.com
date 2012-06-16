@@ -239,6 +239,10 @@ $app_name = idx($app_info, 'name', '');
         </div>
       </div>
       <?php } else { ?>
+        <section id="get-started">
+            <p>Welcome to <span>The Matchmaker</span>! Created as Part of the Toronto Facebook Hackathon </p>
+            <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
+        </section>
       <div>
         <h1>Welcome</h1>
         <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
@@ -246,10 +250,7 @@ $app_name = idx($app_info, 'name', '');
       <?php } ?>
     </header>
 
-    <section id="get-started">
-        <p>Welcome to <span>The Matchmaker</span>! Created as Part of the Toronto Facebook Hackathon </p>
-        <p>This app is intended to help YOU either find a date or easily find a way to meddle in the romantic relationsips of your Facebook friends</p>
-    </section>
+
 
     <?php
       if ($user_id) {
