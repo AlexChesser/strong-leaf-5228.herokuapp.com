@@ -284,7 +284,7 @@ $app_name = idx($app_info, 'name', '');
 		<script type="text/javascript">
 			var ShouldInitFriends = 1;
 			function InitFriends(){
-				var friendsDiv = document.getElementByID("friends");
+				var friendsDiv = document.getElementById("friends");
 				console.log()
 				if (AllFriends != 0){
 					for (i = 0; i<AllFriends.length;i++){
